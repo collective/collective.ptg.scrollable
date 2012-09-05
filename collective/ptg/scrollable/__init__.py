@@ -99,8 +99,7 @@ class ScrollableDisplayType(BatchingDisplayType):
         return u"""
 <script>
 $(function() {
-$(".scrollable").scrollable();
-
+$(".scrollable").scrollable({circular: true});
 
 $(".items img").%(scrollable_effect)s(function() {
 	// see if same thumb is being .....
@@ -135,7 +134,7 @@ $(".items img").%(scrollable_effect)s(function() {
 	$(this).addClass("active");
 
 // when page loads simulate a "click" on the first image
-}).filter(":first").click();
+}).filter(":first").%(scrollable_effect)s();
 });
 </script>
 </script>
@@ -171,6 +170,8 @@ $(".items img").%(scrollable_effect)s(function() {
 #scrollable.scrollable {
     opcaity: %(overlay_opacity)s);
 }
+
+a.right { left: %(boxwidth)s;}
 
 </style>
 <link rel="stylesheet" type="text/css" href="%(style)s"/>

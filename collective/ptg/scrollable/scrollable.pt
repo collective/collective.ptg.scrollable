@@ -1,17 +1,15 @@
 <div class="scrollable_wrapper">
     <div id="image_wrap">
       <!-- Initially the image is a simple 1x1 pixel transparent GIF -->
-      <img src="blank.gif" width="500" height="375" />
+      <img src="blank.gif" />
     </div>
-    <!-- "previous page" action -->
-    <a class="prev browse left"></a>
+
     
     <!-- root element for scrollable -->
     <div class="scrollable" id="scrollable">
       <!-- root element for the items -->
       <div class="items">
- 
-        <tal:images tal:repeat="img view/batch">
+         <tal:images tal:repeat="img view/batch">
             <img src="" alt="" tal:define="number repeat/img/index; 
                             theimage img/image_url;
                             thethumb img/thumb_url" 
@@ -19,6 +17,8 @@
         </tal:images> 
       </div>
     </div>
+    <!-- "previous page" action -->
+    <a class="prev browse left"></a>
     <!-- "next page" action -->
     <a class="next browse right"></a>
 </div>
