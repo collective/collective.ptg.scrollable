@@ -99,7 +99,8 @@ class ScrollableDisplayType(BatchingDisplayType):
         return u"""
 <script>
 $(function() {
-$(".scrollable").scrollable({circular: true}).autoscroll({ autoplay: true });
+$(".scrollable").scrollable();
+
 
 $(".items img").%(scrollable_effect)s(function() {
 	// see if same thumb is being .....
