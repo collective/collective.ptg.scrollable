@@ -1,0 +1,6 @@
+
+.DS_Store
+
+collective.ptg.scrollable.egg-info/*
+
+*.pyc
