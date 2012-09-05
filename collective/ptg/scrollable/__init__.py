@@ -98,45 +98,45 @@ class ScrollableDisplayType(BatchingDisplayType):
     def javascript(self):
         return u"""
 <script>
-$(function() {
-$(".scrollable").scrollable({circular: true});
+$(document).ready(function() {
+    var root = $("#autoscroll").scrollable({circular: true}).autoscroll({ autoplay: false });
+    window.api = root.data("scrollable");
+    
+    $(".items img").%(scrollable_effect)s(function() {
+	    // see if same thumb is being activated 
+	    if ($(this).hasClass("active")) { return; }
 
-$(".items img").%(scrollable_effect)s(function() {
-	// see if same thumb is being .....
-	if ($(this).hasClass("active")) { return; }
+        // calclulate large image's URL based on the thumbnail 
+        var url = $(this).attr("alt");
+    
+        // get handle to element that wraps the image and make it semi-transparent
+        var wrap = $("#image_wrap").fadeTo("medium", 0.5);
+    
+        // the large image 
+        var img = new Image();
+    
+    
+        // call this function after it's loaded
+        img.onload = function() {
+    
+            // make wrapper fully visible
+            wrap.fadeTo("fast", 1);
+    
+            // change the image
+            wrap.find("img").attr("src", url);
 
-	// calclulate large image's URL based on the thumbnail 
-	var url = $(this).attr("alt");
+	    };
 
-	// get handle to element that wraps the image and make it semi-transparent
-	var wrap = $("#image_wrap").fadeTo("medium", 0.5);
+	    // begin loading the image
+	    img.src = url;
 
-	// the large image 
-	var img = new Image();
+	    // activate item
+	    $(".items img").removeClass("active");
+    	$(this).addClass("active");
 
-
-	// call this function after it's loaded
-	img.onload = function() {
-
-		// make wrapper fully visible
-		wrap.fadeTo("fast", 1);
-
-		// change the image
-		wrap.find("img").attr("src", url);
-
-	};
-
-	// begin loading the image
-	img.src = url;
-
-	// activate item
-	$(".items img").removeClass("active");
-	$(this).addClass("active");
-
-// when page loads simulate a "click" on the first image
-}).filter(":first").%(scrollable_effect)s();
+    // when page loads simulate a "click" on the first image
+    }).filter(":first").%(scrollable_effect)s();
 });
-</script>
 </script>
 """ % {
     'speed': self.settings.duration,
