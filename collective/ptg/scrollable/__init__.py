@@ -17,6 +17,10 @@ class IScrollableDisplaySettings(IBaseSettings):
         title=_(u"label_scrollable_imageheight",
             default=u"Height of image box"),
         default=u'260px')
+    scrollable_carouselheight = schema.TextLine(
+        title=_(u"label_scrollable_carouselheight",
+            default=u"Height of carousel box"),
+        default=u'100px')
     scrollable_effect = schema.Choice(
         title=_(u"label_scrollable_effect",
             default=u"Mouseover or click"),
@@ -161,14 +165,14 @@ $(document).ready(function() {
     width: %(boxwidth)s;
 }
 
-
 #image_wrap {
     height: %(boxheight)s;
     padding: %(scrollable_margin)s;
 }
 
-#scrollable.scrollable {
-    opcaity: %(overlay_opacity)s);
+.scrollable {
+    opcaity: %(overlay_opacity)s;
+	width: %(carouselheight)s;
 }
 
 a.right { left: %(boxwidth)s;}
@@ -180,6 +184,7 @@ a.right { left: %(boxwidth)s;}
         'boxwidth': self.settings.scrollable_imagewidth,
         'overlay_opacity': self.settings.scrollable_overlay_opacity,
         'scrollable_margin' : self.settings.scrollable_margin,
+        'carouselheight' : self.settings.carouselheight,
         'style': style
        }
 ScrollableSettings = createSettingsFactory(ScrollableDisplayType.schema)
