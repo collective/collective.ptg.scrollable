@@ -1,4 +1,7 @@
-/* @override http://localhost:8080/XXXxx/++resource++ptg.scrollable/style.css */
+/* @override 
+	http://localhost:8080/XXXxx/++resource++ptg.scrollable/style.css
+	http://localhost:8080/carouse/++resource++ptg.scrollable/style.css
+*/
 
 /* styling for the image wrapper  */
 #image_wrap {
@@ -12,31 +15,12 @@
     overflow: hidden;
 }
 
-/* position and dimensions of the navigator */
-.navi {
+.item {
+	float: left;
+	text-align: center;
 }
- 
 
-/* items inside navigator */
-.navi a {
-    width:8px;
-    height:8px;
-    float:left;
-    margin:3px;
-    background:url(navigator.png) 0 0 no-repeat;
-    display:block;
-    font-size:1px;
-}
- 
-/* mouseover state */
-.navi a:hover {
-    background-position:0 -8px;
-}
- 
-/* active state (current page state) */
-.navi a.active {
-    background-position:0 -16px;
-}
+
 
 #actionButtons {
 	text-align:center;
@@ -81,10 +65,9 @@
 
 /* single scrollable item */
 .scrollable img {
-    float:left;
     display: block;
-    margin-left: 10px;
     background-color:#fff;
+    margin: 2px auto 7px;
     padding:2px;
     border:1px solid #ccc;
     -moz-border-radius:4px;

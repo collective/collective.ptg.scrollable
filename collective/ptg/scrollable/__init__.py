@@ -21,6 +21,11 @@ class IScrollableDisplaySettings(IBaseSettings):
         title=_(u"label_scrollable_carouselheight",
             default=u"Height of carousel box"),
         default=u'100px')
+    scrollable_itemwidth = schema.TextLine(
+        title=_(u"label_scrollable_itemwidth",
+            default=u"width of each box containing a thumbnail"),
+        default=u'100px')
+        
     scrollable_effect = schema.Choice(
         title=_(u"label_scrollable_effect",
             default=u"Mouseover or click"),
@@ -79,6 +84,11 @@ class IScrollableDisplaySettings(IBaseSettings):
     scrollable_buttons = schema.Bool(
         title=_(u"label_buttons",
             default=u"Show navigation buttons?")
+        )
+    
+    scrollable_showitemdescription = schema.Bool(
+        title=_(u"label_showitemdescriptions",
+            default=u"Show title and description on thumbnail?")
         )
     
     scrollable_scrollbar = schema.Bool(
@@ -195,6 +205,10 @@ $(document).ready(function() {
 	height: %(carouselheight)s;
 }
 
+.item {
+	width: %(itemwidth)s;
+}
+
 a.right { left: %(boxwidth)s;}
 
 </style>
@@ -202,6 +216,7 @@ a.right { left: %(boxwidth)s;}
 """ % {
         'boxheight': self.settings.scrollable_imageheight,
         'boxwidth': self.settings.scrollable_imagewidth,
+        'itemwidth': self.settings.scrollable_itemwidth,
         'overlay_opacity': self.settings.scrollable_overlay_opacity,
         'scrollable_margin' : self.settings.scrollable_margin,
         'carouselheight' : self.settings.scrollable_carouselheight,
