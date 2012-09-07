@@ -18,14 +18,19 @@
       </div>
     </div>
     <!-- "previous page" action -->
-    <a class="prev browse left"></a>
+    <a class="prev browse left" tal:condition="view/settings/scrollable_arrows"></a>
     <!-- "next page" action -->
-    <a class="next browse right"></a>
-    <div id="actionButtons">
+    <a class="next browse right" tal:condition="view/settings/scrollable_arrows"></a>
+    <div id="actionButtons" tal:condition="view/settings/scrollable_buttons">
 	    <button type="button" onClick="api.play()">Play</button>
 	    <button type="button" onClick="api.pause()">Pause</button>
 	    <button type="button" onClick="api.stop()">Stop</button>
     </div>
+	<div class="scroll-bar-wrap ui-widget-content ui-corner-bottom" 
+	    tal:condition="view/settings/scrollable_scrollbar">
+		<div class="scroll-bar"></div>
+	</div>
+
 </div>
 
 <div class="visualClear">&nbsp;</div>

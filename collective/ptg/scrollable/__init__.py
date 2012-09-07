@@ -70,6 +70,22 @@ class IScrollableDisplaySettings(IBaseSettings):
         title=_(u"label_scrollable_margin",
             default=u"Margin around image"),
         default=u"5px 0px 5px 0")
+
+    scrollable_arrows = schema.Bool(
+        title=_(u"label_arrows",
+            default=u"Show navigation arrows?")
+        )
+            
+    scrollable_buttons = schema.Bool(
+        title=_(u"label_buttons",
+            default=u"Show navigation buttons?")
+        )
+    
+    scrollable_scrollbar = schema.Bool(
+        title=_(u"label_scrollbar",
+            default=u"Show scrollbar?")
+        )
+    
     scrollable_style = schema.Choice(
         title=_(u"label_scrollable_style",
                 default=u"What stylesheet (css file) to use"),
@@ -91,6 +107,7 @@ class IScrollableDisplaySettings(IBaseSettings):
         title=_(u"label_custom_style",
             default=u"Name of Custom css file if you chose that above"),
         default=u"mycustomstyle.css")
+
 
 
 class ScrollableDisplayType(BatchingDisplayType):
@@ -142,6 +159,9 @@ $(document).ready(function() {
     }).filter(":first").%(scrollable_effect)s();
 });
 </script>
+
+
+
 """ % {
     'speed': self.settings.duration,
     'portal_url': self.portal_url,
@@ -172,7 +192,7 @@ $(document).ready(function() {
 
 .scrollable {
     opcaity: %(overlay_opacity)s;
-	width: %(carouselheight)s;
+	height: %(carouselheight)s;
 }
 
 a.right { left: %(boxwidth)s;}
@@ -184,7 +204,7 @@ a.right { left: %(boxwidth)s;}
         'boxwidth': self.settings.scrollable_imagewidth,
         'overlay_opacity': self.settings.scrollable_overlay_opacity,
         'scrollable_margin' : self.settings.scrollable_margin,
-        'carouselheight' : self.settings.carouselheight,
+        'carouselheight' : self.settings.scrollable_carouselheight,
         'style': style
        }
 ScrollableSettings = createSettingsFactory(ScrollableDisplayType.schema)
