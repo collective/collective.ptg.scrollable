@@ -16,9 +16,9 @@
                             thethumb img/thumb_url" 
                             tal:attributes="src thethumb; alt theimage" />
                 <h3 class="image-title" tal:content="img/title" 
-                    tal:condition="scrollable_showitemdescription">Title</h3> 
+                    tal:condition="view/settings/scrollable_showitemdescription">Title</h3> 
                 <p class="image-desc" 
-                    tal:condition="scrollable_showitemdescription"
+                    tal:condition="view/settings/scrollable_showitemdescription"
                     tal:content="structure img/description">Description</p> 
             </div>
         </tal:images> 
