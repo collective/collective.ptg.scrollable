@@ -128,6 +128,9 @@ class ScrollableDisplayType(BatchingDisplayType):
 
     def javascript(self):
         return u"""
+<script type="text/javascript"
+    src="%(portal_url)s/++resource++plone.app.jquerytools.plugins.js">
+</script>
 <script>
 $(document).ready(function() {
     var root = $("#autoscroll").scrollable({circular: true}).autoscroll({ autoplay: false });
