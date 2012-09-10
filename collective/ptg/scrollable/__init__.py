@@ -172,9 +172,6 @@ $(document).ready(function() {
     }).filter(":first").%(scrollable_effect)s();
 });
 </script>
-
-
-
 """ % {
     'speed': self.settings.duration,
     'portal_url': self.portal_url,
