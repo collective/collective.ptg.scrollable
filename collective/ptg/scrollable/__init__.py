@@ -26,6 +26,11 @@ class IScrollableDisplaySettings(IBaseSettings):
             default=u"width of each box containing a thumbnail"),
         default=u'100px')
         
+    scrollable_circular = schema.Bool(
+        title=_(u"label_circular",
+            default=u"Shoud carousel continue after last thumb?")
+        )
+        
     scrollable_effect = schema.Choice(
         title=_(u"label_scrollable_effect",
             default=u"Mouseover or click"),
@@ -133,7 +138,7 @@ class ScrollableDisplayType(BatchingDisplayType):
 </script>
 <script>
 $(document).ready(function() {
-    var root = $("#autoscroll").scrollable({circular: true}).autoscroll({ autoplay: %(start_automatically)s });
+    var root = $("#autoscroll").scrollable({circular: %(circular)s}).autoscroll({ autoplay: %(start_automatically)s });
     window.api = root.data("scrollable");
     
     $(".items img").%(scrollable_effect)s(function() {
@@ -176,6 +181,7 @@ $(document).ready(function() {
     'speed': self.settings.duration,
     'portal_url': self.portal_url,
     'scrollable_effect' : self.settings.scrollable_effect,
+    'scrollable_circular': jsbool(self.settings.scrollable_circular),
     'start_automatically': jsbool(self.settings.timed),
 }
 
