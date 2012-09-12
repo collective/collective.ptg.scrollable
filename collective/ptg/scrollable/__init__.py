@@ -133,7 +133,7 @@ class ScrollableDisplayType(BatchingDisplayType):
 </script>
 <script>
 $(document).ready(function() {
-    var root = $("#autoscroll").scrollable({circular: true}).autoscroll({ autoplay: false });
+    var root = $("#autoscroll").scrollable({circular: true}).autoscroll({ autoplay: %(start_automatically)s });
     window.api = root.data("scrollable");
     
     $(".items img").%(scrollable_effect)s(function() {
