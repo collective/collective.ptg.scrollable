@@ -37,6 +37,7 @@
 	    <button type="button" onClick="api.play()">Play</button>
 	    <button type="button" onClick="api.pause()">Pause</button>
 	    <button type="button" onClick="api.stop()">Stop</button>
+	    <button type="button" onClick="api.begin()">Rewind</button>
     </div>
 
 
