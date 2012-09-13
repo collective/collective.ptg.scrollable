@@ -4,3 +4,7 @@
 collective.ptg.scrollable.egg-info/*
 
 *.pyc
+
+collective/ptg/scrollable/scrollable.pt
+
+dist/collective.ptg.scrollable-0.2.zip

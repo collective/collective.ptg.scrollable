@@ -33,7 +33,7 @@
 	    tal:condition="view/settings/scrollable_scrollbar">
 		<div class="scroll-bar"></div>
 	</div>
-    <div id="actionButtons" tal:condition="view/settings/scrollable_buttons">
+    <div id="actionButtons" tal:condition="view/settings/start_timed">
 	    <button type="button" onClick="api.play()">Play</button>
 	    <button type="button" onClick="api.pause()">Pause</button>
 	    <button type="button" onClick="api.stop()">Stop</button>
