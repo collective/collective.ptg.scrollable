@@ -100,7 +100,13 @@ class IScrollableDisplaySettings(IBaseSettings):
         title=_(u"label_scrollbar",
             default=u"Show scrollbar?")
         )
-    
+        
+    scrollable_steps = schema.Int(
+        title=_(u"label_steps",
+            default=u"Step arrows which moves forward by x slides. Use 0 for off"),
+        default=3,
+        min=-1)
+        
     scrollable_style = schema.Choice(
         title=_(u"label_scrollable_style",
                 default=u"What stylesheet (css file) to use"),
@@ -123,8 +129,6 @@ class IScrollableDisplaySettings(IBaseSettings):
             default=u"Name of Custom css file if you chose that above"),
         default=u"mycustomstyle.css")
 
-
-
 class ScrollableDisplayType(BatchingDisplayType):
     name = u"scrollable"
     schema = IScrollableDisplaySettings
@@ -138,7 +142,7 @@ class ScrollableDisplayType(BatchingDisplayType):
 </script>
 <script>
 $(document).ready(function() {
-    var root = $("#autoscroll").scrollable({circular: %(scrollable_circular)s, interval: %(speed)i}).autoscroll({ autoplay: %(start_automatically)s });
+    var root = $("#autoscroll").scrollable({circular: %(scrollable_circular)s}).autoscroll({ autoplay: %(start_automatically)s });
     window.api = root.data("scrollable");
     
     $(".items img").%(scrollable_effect)s(function() {

@@ -1,4 +1,4 @@
-<div class="scrollable_wrapper">
+<div class="scrollable_wrapper" >
     <div id="image_wrap">
       <!-- Initially the image is a simple 1x1 pixel transparent GIF -->
       <img src="blank.gif" />
@@ -25,7 +25,7 @@
       </div>
     </div>
     <!-- "previous page" action -->
-    <a class="prev browse left" tal:condition="view/settings/scrollable_arrows"></a>
+    <a class="prev browse left"  tal:condition="view/settings/scrollable_arrows"></a>
     <!-- "next page" action -->
     <a class="next browse right" tal:condition="view/settings/scrollable_arrows"></a>
     <div class="visualClear">&nbsp;</div>
@@ -37,9 +37,12 @@
 	    <button type="button" onClick="api.play()">Play</button>
 	    <button type="button" onClick="api.pause()">Pause</button>
 	    <button type="button" onClick="api.stop()">Stop</button>
-	    <button class="next" type="button" onClick="api.begin()">Rewind</button>
+	    <button type="button" onClick="api.begin()">Rewind</button>
     </div>
-
+	<div id="stepArrows" tal:define="steps view/settings/scrollable_steps"  tal:condition="steps" >
+	    <span class="browse left"  onClick="" tal:attributes="onclick string: api.move(-($steps))"></span>
+	    <span class="browse right" onClick="" tal:attributes="onclick string: api.move($steps)"> </span>
+    </div>
 
 </div>
 
