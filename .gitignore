@@ -8,3 +8,5 @@ collective.ptg.scrollable.egg-info/*
 collective/ptg/scrollable/scrollable.pt
 
 dist/collective.ptg.scrollable-0.2.zip
+
+collective/ptg/scrollable/resources/jquery.slideshowify.js
