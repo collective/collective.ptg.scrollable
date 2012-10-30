@@ -29,10 +29,7 @@
     <!-- "next page" action -->
     <a class="next browse right" tal:condition="view/settings/scrollable_arrows"></a>
     <div class="visualClear">&nbsp;</div>
-	<div class="scroll-bar-wrap ui-widget-content ui-corner-bottom" 
-	    tal:condition="view/settings/scrollable_scrollbar">
-		<div class="scroll-bar"></div>
-	</div>
+	<div class="scroll-bar" tal:condition="view/settings/scrollable_scrollbar"></div>
     <div id="actionButtons" tal:condition="view/settings/start_timed">
 	    <button type="button" onClick="api.play()">Play</button>
 	    <button type="button" onClick="api.pause()">Pause</button>
@@ -46,3 +43,43 @@
 
 </div>
 <div class="visualClear">&nbsp;</div>
+<script>
+$(document).ready(function() {
+// Variable to hold scroll type
+var slideDrag,
+// Width of .scroll-content ul
+slideWidth = 330,
+// Speed of animation in ms
+slideSpeed = 400;
+
+$( ".scroll-bar" ).slider({ 
+    start: checkType,
+    slide: doSlide,
+    max: 20 
+});
+ 
+ function checkType(e){
+    slideDrag = $(e.originalEvent.target).hasClass("scrollable");
+}
+ 
+ function doSlide(e, ui){
+    var target = $(e.target).prev(".scrollable"),
+    // If sliders were above the content instead of below, we'd use:
+    // target = $(e.target).next(".scrollable")
+    maxScroll = target.attr("scrollWidth") - target.width();
+ 
+    // Was it a click or drag?
+    if (slideDrag == true){
+        // User dragged slider head, match position
+        target.attr({scrollLeft: ui.value * (maxScroll / slideWidth) });
+    }
+    else{
+        // User clicked on slider itself, animate to position
+        target.stop().animate({
+            scrollLeft: ui.value * (maxScroll / slideWidth)
+        }, slideSpeed);
+    }
+}
+ 
+});
+</script>
