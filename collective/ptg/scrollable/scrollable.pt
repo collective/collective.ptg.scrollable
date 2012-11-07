@@ -1,4 +1,5 @@
-<h3 id="image-title"></h3>
+<h3 id="image-title" tal:condition="view/settings/scrollable_title"></h3>
+<p id="image-description" tal:condition="view/settings/scrollable_description"></p>
 <div class="scrollable_wrapper" >
     <div id="image_wrap">
       <!-- Initially the image is a simple 1x1 pixel transparent GIF -->
@@ -13,7 +14,7 @@
                 <img src="" alt="" tal:define="number repeat/img/index; 
                             theimage img/image_url;
                             thethumb img/thumb_url" 
-                            tal:attributes="src thethumb; alt theimage; title img/title" />
+                            tal:attributes="src thethumb; alt theimage; title img/title; description img/description" />
                 <h3 class="image-title" tal:content="img/title" 
                     tal:condition="view/settings/scrollable_showitemdescription">Title</h3> 
                 <p class="image-desc" 

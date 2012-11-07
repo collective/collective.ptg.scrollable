@@ -90,6 +90,16 @@ class IScrollableDisplaySettings(IBaseSettings):
         title=_(u"label_buttons",
             default=u"Show navigation buttons?")
         )
+
+    scrollable_title = schema.Bool(
+        title=_(u"label_showtitle",
+            default=u"Show Title on large image?")
+        )
+    
+    scrollable_description = schema.Bool(
+        title=_(u"label_showdescriptions",
+            default=u"Show Description on large image?")
+        )
     
     scrollable_showitemdescription = schema.Bool(
         title=_(u"label_showitemdescriptions",
@@ -154,6 +164,9 @@ $(document).ready(function() {
         
         // get large image's title 
         var title = $(this).attr("title");
+        
+        // get large image's description 
+        var description = $(this).attr("description");
     
         // get handle to element that wraps the image and make it semi-transparent
         var wrap = $("#image_wrap").fadeTo("medium", 0.5);
@@ -173,6 +186,9 @@ $(document).ready(function() {
             
             //change the title
             $("#image-title").html(title);
+            
+            //change the description
+            $("#image-description").html(description);
 
 	    };
 
