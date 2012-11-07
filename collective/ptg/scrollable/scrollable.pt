@@ -1,10 +1,9 @@
+<h3 id="image-title"></h3>
 <div class="scrollable_wrapper" >
     <div id="image_wrap">
       <!-- Initially the image is a simple 1x1 pixel transparent GIF -->
       <img src="blank.gif" />
     </div>
-
-    
     <!-- root element for scrollable -->
     <div class="scrollable" id="autoscroll">
       <!-- root element for the items -->
@@ -14,7 +13,7 @@
                 <img src="" alt="" tal:define="number repeat/img/index; 
                             theimage img/image_url;
                             thethumb img/thumb_url" 
-                            tal:attributes="src thethumb; alt theimage" />
+                            tal:attributes="src thethumb; alt theimage; title img/title" />
                 <h3 class="image-title" tal:content="img/title" 
                     tal:condition="view/settings/scrollable_showitemdescription">Title</h3> 
                 <p class="image-desc" 

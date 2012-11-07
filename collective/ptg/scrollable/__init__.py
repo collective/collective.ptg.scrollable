@@ -151,6 +151,9 @@ $(document).ready(function() {
 
         // calclulate large image's URL based on the thumbnail 
         var url = $(this).attr("alt");
+        
+        // get large image's title 
+        var title = $(this).attr("title");
     
         // get handle to element that wraps the image and make it semi-transparent
         var wrap = $("#image_wrap").fadeTo("medium", 0.5);
@@ -167,6 +170,9 @@ $(document).ready(function() {
     
             // change the image
             wrap.find("img").attr("src", url);
+            
+            //change the title
+            $("#image-title").html(title);
 
 	    };
 
