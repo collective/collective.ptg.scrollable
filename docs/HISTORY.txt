@@ -6,6 +6,8 @@ Changelog
 0.4 (unreleased)
 ------------------
 
+- Updated Spanish translation [macagua]
+
 - Updated Gettext files [macagua]
 
 0.3 (2012-11-07)
