@@ -1,0 +1,181 @@
+# Manually defined message ids
+msgid ""
+msgstr ""
+"Project-Id-Version: collective.ptg.scrollable VERSION\n"
+"POT-Creation-Date: 2018-08-18 04:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.ptg.scrollable\n"
+
+#. Default: "Show navigation arrows?"
+#: ./__init__.py:85
+msgid "label_arrows"
+msgstr ""
+
+#. Default: "Show navigation buttons?"
+#: ./__init__.py:90
+msgid "label_buttons"
+msgstr ""
+
+#. Default: "Shoud carousel continue after last thumb?"
+#: ./__init__.py:30
+msgid "label_circular"
+msgstr ""
+
+#. Default: "Name of Custom css file if you chose that above"
+#: ./__init__.py:138
+msgid "label_custom_style"
+msgstr ""
+
+#. Default: "Height of carousel box"
+#: ./__init__.py:21
+msgid "label_scrollable_carouselheight"
+msgstr ""
+
+#. Default: "Click on image"
+#: ./__init__.py:40
+msgid "label_scrollable_click"
+msgstr ""
+
+#. Default: "Scrollable"
+#: ./__init__.py:145
+msgid "label_scrollable_display_type"
+msgstr ""
+
+#. Default: "Mouseover or click"
+#: ./__init__.py:35
+msgid "label_scrollable_effect"
+msgstr ""
+
+#. Default: "Height of image box"
+#: ./__init__.py:17
+msgid "label_scrollable_imageheight"
+msgstr ""
+
+#. Default: "Width of image box"
+#: ./__init__.py:13
+msgid "label_scrollable_imagewidth"
+msgstr ""
+
+#. Default: "width of each box containing a thumbnail"
+#: ./__init__.py:25
+msgid "label_scrollable_itemwidth"
+msgstr ""
+
+#. Default: "Margin around image"
+#: ./__init__.py:80
+msgid "label_scrollable_margin"
+msgstr ""
+
+#. Default: "Mouse enter"
+#: ./__init__.py:42
+msgid "label_scrollable_mouseover"
+msgstr ""
+
+#. Default: "Opacity on overlay"
+#: ./__init__.py:46
+msgid "label_scrollable_overlay_opacity"
+msgstr ""
+
+#. Default: "0.1 Almost gone"
+#: ./__init__.py:51
+msgid "label_scrollable_overlay_opacity1"
+msgstr ""
+
+#. Default: "1 Off"
+#: ./__init__.py:75
+msgid "label_scrollable_overlay_opacity10"
+msgstr ""
+
+#. Default: "0.2"
+#: ./__init__.py:54
+msgid "label_scrollable_overlay_opacity2"
+msgstr ""
+
+#. Default: "0.3"
+#: ./__init__.py:56
+msgid "label_scrollable_overlay_opacity3"
+msgstr ""
+
+#. Default: "0.4 A bit more"
+#: ./__init__.py:58
+msgid "label_scrollable_overlay_opacity4"
+msgstr ""
+
+#. Default: "0.5"
+#: ./__init__.py:61
+msgid "label_scrollable_overlay_opacity5"
+msgstr ""
+
+#. Default: "0.6"
+#: ./__init__.py:63
+msgid "label_scrollable_overlay_opacity6"
+msgstr ""
+
+#. Default: "0.7 Quite a bit"
+#: ./__init__.py:66
+msgid "label_scrollable_overlay_opacity7"
+msgstr ""
+
+#. Default: "0.8 A bit much"
+#: ./__init__.py:69
+msgid "label_scrollable_overlay_opacity8"
+msgstr ""
+
+#. Default: "0.9 Almost nothing"
+#: ./__init__.py:72
+msgid "label_scrollable_overlay_opacity9"
+msgstr ""
+
+#. Default: "What stylesheet (css file) to use"
+#: ./__init__.py:121
+msgid "label_scrollable_style"
+msgstr ""
+
+#. Default: "Custom css file"
+#: ./__init__.py:132
+msgid "label_scrollable_style_custom"
+msgstr ""
+
+#. Default: "Default"
+#: ./__init__.py:126
+msgid "label_scrollable_style_default"
+msgstr ""
+
+#. Default: "No style / css file"
+#: ./__init__.py:129
+msgid "label_scrollable_style_no"
+msgstr ""
+
+#. Default: "Show scrollbar?"
+#: ./__init__.py:110
+msgid "label_scrollbar"
+msgstr ""
+
+#. Default: "Show Description on large image?"
+#: ./__init__.py:100
+msgid "label_showdescriptions"
+msgstr ""
+
+#. Default: "Show title and description on thumbnail?"
+#: ./__init__.py:105
+msgid "label_showitemdescriptions"
+msgstr ""
+
+#. Default: "Show Title on large image?"
+#: ./__init__.py:95
+msgid "label_showtitle"
+msgstr ""
+
+#. Default: "Step arrows which moves forward by x slides. Use 0 for off"
+#: ./__init__.py:115
+msgid "label_steps"
+msgstr ""

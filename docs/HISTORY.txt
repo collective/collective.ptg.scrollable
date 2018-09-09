@@ -6,7 +6,7 @@ Changelog
 0.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Updated Gettext files [macagua]
 
 0.3 (2012-11-07)
 -------------------
