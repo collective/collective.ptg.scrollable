@@ -57,7 +57,7 @@ msgstr "Scrollable"
 #. Default: "Mouseover or click"
 #: ./__init__.py:35
 msgid "label_scrollable_effect"
-msgstr ""
+msgstr "Cursor del ratón sobre o al hacer clic"
 
 #. Default: "Height of image box"
 #: ./__init__.py:17
@@ -82,7 +82,7 @@ msgstr "Margen alrededor de la imagen"
 #. Default: "Mouse enter"
 #: ./__init__.py:42
 msgid "label_scrollable_mouseover"
-msgstr ""
+msgstr "Cursor del ratón sobre"
 
 #. Default: "Opacity on overlay"
 #: ./__init__.py:46
@@ -163,7 +163,7 @@ msgstr "Sin estilo / archivo css"
 #. Default: "Show scrollbar?"
 #: ./__init__.py:110
 msgid "label_scrollbar"
-msgstr ""
+msgstr "¿Mostrar barra de desplazamiento?"
 
 #. Default: "Show Description on large image?"
 #: ./__init__.py:100
