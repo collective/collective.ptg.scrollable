@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: collective.ptg.scrollable\n"
 "POT-Creation-Date: 2018-08-18 04:17+0000\n"
-"PO-Revision-Date: 2018-09-08 21:08-0400\n"
+"PO-Revision-Date: 2018-09-13 00:30-0400\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: Spanish Team\n"
 "Language: es\n"
@@ -32,7 +32,7 @@ msgstr "¿Mostrar botones de navegación?"
 #. Default: "Shoud carousel continue after last thumb?"
 #: ./__init__.py:30
 msgid "label_circular"
-msgstr "¿Debería el carousel continuar después de la ultima miniatura?"
+msgstr "¿Debería el carrusel continuar después de la ultima miniatura?"
 
 #. Default: "Name of Custom css file if you chose that above"
 #: ./__init__.py:138
@@ -42,7 +42,7 @@ msgstr "Nombre de archivo css Personalizado si usted elige eso arriba"
 #. Default: "Height of carousel box"
 #: ./__init__.py:21
 msgid "label_scrollable_carouselheight"
-msgstr "Alto de la caja del carousel"
+msgstr "Alto de la caja del carrusel"
 
 #. Default: "Click on image"
 #: ./__init__.py:40
@@ -72,7 +72,7 @@ msgstr "Ancho de la caja de imagen"
 #. Default: "width of each box containing a thumbnail"
 #: ./__init__.py:25
 msgid "label_scrollable_itemwidth"
-msgstr ""
+msgstr "ancho de cada caja que contiene una miniatura"
 
 #. Default: "Margin around image"
 #: ./__init__.py:80
@@ -86,9 +86,8 @@ msgstr "Cursor del ratón sobre"
 
 #. Default: "Opacity on overlay"
 #: ./__init__.py:46
-#, fuzzy
 msgid "label_scrollable_overlay_opacity"
-msgstr "Opacidad en "
+msgstr "Opacidad en la superposición"
 
 #. Default: "0.1 Almost gone"
 #: ./__init__.py:51
@@ -183,4 +182,4 @@ msgstr "¿Mostrar Título en imagen grande?"
 #. Default: "Step arrows which moves forward by x slides. Use 0 for off"
 #: ./__init__.py:115
 msgid "label_steps"
-msgstr ""
+msgstr "Flechas de Paso que se mueven hacia adelante por x diapositivas. Use 0 para desactivar"
