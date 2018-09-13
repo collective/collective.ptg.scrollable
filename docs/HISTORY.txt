@@ -1,4 +1,3 @@
-
 Changelog
 =========
 
@@ -10,15 +9,19 @@ Changelog
 
 - Updated Gettext files [macagua]
 
+
 0.3 (2012-11-07)
 -------------------
 
 - added title and description (option) [espenmn]
 
+
 0.2 (2012-09-13)
 -------------------
 
-- added arrows (buttons) with 'steps', this means it is now possible to scroll by more than one. [espenmn]
+- added arrows (buttons) with 'steps', this means it is now possible 
+  to scroll by more than one. [espenmn]
+
 - added rewind button. [espenmn] 
 
 
